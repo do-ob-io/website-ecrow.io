@@ -17,6 +17,7 @@ The company sells access to its software through subscriptions, one-time purchas
 ## Structure
 
 - `src/app/` — Next.js App Router pages and layouts
+- `src/components/` — React components
 
 ## Technical Stack
 
@@ -27,5 +28,5 @@ The company sells access to its software through subscriptions, one-time purchas
 
 ## Rules
 
-- Utilize workspace libaries
+- Utilize workspace libraries
 - Add new reusable code to the appropriate workspace library when developing
