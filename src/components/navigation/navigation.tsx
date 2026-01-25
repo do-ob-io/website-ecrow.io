@@ -1,6 +1,9 @@
 import Link from "next/link";
-import { Logo } from "./logo";
+import { Logo } from "../logo";
 
+/**
+ * Props for the NavLink component.
+ */
 export interface NavLinkProps {
   /**
    * Link destination.
@@ -13,7 +16,12 @@ export interface NavLinkProps {
 }
 
 /**
- * Individual navigation link.
+ * Individual navigation link component.
+ *
+ * @param props - The nav link props.
+ * @param props.href - Link destination.
+ * @param props.children - Link text.
+ * @returns The nav link element.
  */
 function NavLink({ href, children }: NavLinkProps) {
   return (
@@ -28,6 +36,13 @@ function NavLink({ href, children }: NavLinkProps) {
 
 /**
  * Primary navigation header component.
+ *
+ * @returns The navigation header element.
+ *
+ * @example
+ * ```tsx
+ * <Navigation />
+ * ```
  */
 export function Navigation() {
   return (

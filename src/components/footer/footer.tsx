@@ -1,4 +1,4 @@
-import { Logo } from "./logo";
+import { Logo } from "../logo";
 
 const pageLinks = [
   { label: "Services", href: "#services" },
@@ -9,6 +9,13 @@ const pageLinks = [
 
 /**
  * Site footer with navigation and company information.
+ *
+ * @returns The footer element.
+ *
+ * @example
+ * ```tsx
+ * <Footer />
+ * ```
  */
 export function Footer() {
   return (

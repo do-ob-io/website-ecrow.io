@@ -1,5 +1,8 @@
 import { cn } from "@do-ob/core/web";
 
+/**
+ * Props for the FeatureCard component.
+ */
 export interface FeatureCardProps {
   /**
    * Icon rendered at the top of the card.
@@ -32,6 +35,24 @@ const accentStyles = {
 
 /**
  * Feature card component for showcasing capabilities.
+ *
+ * @param props - The feature card props.
+ * @param props.icon - Icon rendered at the top of the card.
+ * @param props.title - Title of the feature.
+ * @param props.description - Description of the feature.
+ * @param props.accent - Optional accent color for the icon background.
+ * @param props.className - Additional CSS classes.
+ * @returns The feature card element.
+ *
+ * @example
+ * ```tsx
+ * <FeatureCard
+ *   icon={<LightningIcon />}
+ *   title="Lightning Fast"
+ *   description="Optimized for speed."
+ *   accent="primary"
+ * />
+ * ```
  */
 export function FeatureCard({
   icon,

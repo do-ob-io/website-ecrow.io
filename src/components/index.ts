@@ -6,5 +6,5 @@ export { Button, type ButtonProps } from "./button";
 export { SectionHeading, type SectionHeadingProps } from "./section-heading";
 export { FeatureCard, type FeatureCardProps } from "./feature-card";
 export { ServiceCard, type ServiceCardProps } from "./service-card";
-export { Navigation } from "./navigation";
+export { Navigation, type NavLinkProps } from "./navigation";
 export { Footer } from "./footer";

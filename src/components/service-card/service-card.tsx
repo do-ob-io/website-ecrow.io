@@ -1,5 +1,8 @@
 import { cn } from "@do-ob/core/web";
 
+/**
+ * Props for the ServiceCard component.
+ */
 export interface ServiceCardProps {
   /**
    * Title of the service.
@@ -25,6 +28,24 @@ export interface ServiceCardProps {
 
 /**
  * Service card component for showcasing product offerings.
+ *
+ * @param props - The service card props.
+ * @param props.title - Title of the service.
+ * @param props.description - Description of the service.
+ * @param props.illustration - Visual illustration for the service.
+ * @param props.tags - Tags/labels for the service.
+ * @param props.className - Additional CSS classes.
+ * @returns The service card element.
+ *
+ * @example
+ * ```tsx
+ * <ServiceCard
+ *   title="SaaS Applications"
+ *   description="Enterprise-grade web applications."
+ *   illustration={<AppIllustration />}
+ *   tags={["Enterprise", "Cloud-Native"]}
+ * />
+ * ```
  */
 export function ServiceCard({
   title,

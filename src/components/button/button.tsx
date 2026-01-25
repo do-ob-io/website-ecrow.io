@@ -1,5 +1,8 @@
 import { cn } from "@do-ob/core/web";
 
+/**
+ * Props for the Button component.
+ */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Visual style variant.
@@ -35,6 +38,18 @@ const sizes = {
 
 /**
  * Primary button component for calls to action.
+ *
+ * @param props - The button props.
+ * @param props.variant - Visual style variant.
+ * @param props.size - Size of the button.
+ * @param props.className - Additional CSS classes.
+ * @param props.children - Content to render inside the button.
+ * @returns The button element.
+ *
+ * @example
+ * ```tsx
+ * <Button variant="primary" size="md">Click Me</Button>
+ * ```
  */
 export function Button({
   variant = "primary",

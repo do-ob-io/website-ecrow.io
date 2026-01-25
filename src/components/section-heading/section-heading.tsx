@@ -1,5 +1,8 @@
 import { cn } from "@do-ob/core/web";
 
+/**
+ * Props for the SectionHeading component.
+ */
 export interface SectionHeadingProps {
   /**
    * Eyebrow text displayed above the title.
@@ -26,6 +29,23 @@ export interface SectionHeadingProps {
 
 /**
  * Section heading component with eyebrow, title, and subtitle.
+ *
+ * @param props - The section heading props.
+ * @param props.eyebrow - Eyebrow text displayed above the title.
+ * @param props.title - Main title text.
+ * @param props.subtitle - Subtitle/description text.
+ * @param props.align - Alignment of the text.
+ * @param props.className - Additional CSS classes.
+ * @returns The section heading element.
+ *
+ * @example
+ * ```tsx
+ * <SectionHeading
+ *   eyebrow="About Us"
+ *   title="Our Mission"
+ *   subtitle="Building digital excellence"
+ * />
+ * ```
  */
 export function SectionHeading({
   eyebrow,

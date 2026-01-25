@@ -1,5 +1,5 @@
 /**
- * eCrow brand logo component with animated crow silhouette.
+ * Props for the Logo component.
  */
 export interface LogoProps {
   /**
@@ -26,6 +26,17 @@ const sizes = {
 
 /**
  * eCrow brand logo with geometric crow icon.
+ *
+ * @param props - The logo props.
+ * @param props.size - Size variant for the logo.
+ * @param props.showText - Whether to show the text alongside the icon.
+ * @param props.className - Additional CSS classes to apply.
+ * @returns The logo element.
+ *
+ * @example
+ * ```tsx
+ * <Logo size="lg" showText={true} />
+ * ```
  */
 export function Logo({ size = "md", showText = true, className = "" }: LogoProps) {
   const { icon, text } = sizes[size];
