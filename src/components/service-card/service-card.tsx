@@ -1,4 +1,4 @@
-import { cn } from "@do-ob/core/web";
+import { cn } from '@do-ob/core/web';
 
 /**
  * Props for the ServiceCard component.
@@ -7,23 +7,23 @@ export interface ServiceCardProps {
   /**
    * Title of the service.
    */
-  title: string;
+  readonly title: string;
   /**
    * Description of the service.
    */
-  description: string;
+  readonly description: string;
   /**
    * Visual illustration for the service.
    */
-  illustration: React.ReactNode;
+  readonly illustration: React.ReactNode;
   /**
    * Tags/labels for the service.
    */
-  tags?: string[];
+  readonly tags?: string[];
   /**
    * Additional CSS classes.
    */
-  className?: string;
+  readonly className?: string;
 }
 
 /**
@@ -57,17 +57,27 @@ export function ServiceCard({
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-3xl border border-surface-border bg-background-elevated transition-all duration-500 hover-lift",
-        className
+        `
+          group border-surface-border bg-background-elevated hover-lift relative
+          overflow-hidden rounded-3xl border transition-all duration-500
+        `,
+        className,
       )}
     >
       {/* Illustration area */}
-      <div className="relative h-48 overflow-hidden bg-linear-to-br from-background-subtle to-background-elevated md:h-56">
+      <div className="
+        from-background-subtle to-background-elevated relative h-48
+        overflow-hidden bg-linear-to-br
+        md:h-56
+      ">
         <div className="absolute inset-0 flex items-center justify-center">
           {illustration}
         </div>
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-linear-to-t from-background-elevated to-transparent" />
+        <div className="
+          from-background-elevated absolute inset-0 bg-linear-to-t
+          to-transparent
+        " />
       </div>
 
       {/* Content */}
@@ -78,7 +88,10 @@ export function ServiceCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-surface-highlight px-3 py-1 font-mono text-xs uppercase tracking-wider text-accent-primary"
+                className="
+                  bg-surface-highlight text-accent-primary rounded-full px-3
+                  py-1 font-mono text-xs tracking-wider uppercase
+                "
               >
                 {tag}
               </span>
@@ -86,14 +99,18 @@ export function ServiceCard({
           </div>
         )}
 
-        <h3 className="mb-3 font-display text-2xl font-bold text-foreground">
+        <h3 className="font-display text-foreground mb-3 text-2xl font-bold">
           {title}
         </h3>
-        <p className="leading-relaxed text-foreground-muted">{description}</p>
+        <p className="text-foreground-muted leading-relaxed">{description}</p>
       </div>
 
       {/* Hover glow effect */}
-      <div className="absolute inset-0 rounded-3xl opacity-0 ring-1 ring-accent-primary/50 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="
+        ring-accent-primary/50 absolute inset-0 rounded-3xl opacity-0 ring-1
+        transition-opacity duration-500
+        group-hover:opacity-100
+      " />
     </article>
   );
 }

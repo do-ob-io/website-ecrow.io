@@ -6,22 +6,22 @@ export interface LogoProps {
    * Size variant for the logo.
    * @default "md"
    */
-  size?: "sm" | "md" | "lg";
+  readonly size?: 'sm' | 'md' | 'lg';
   /**
    * Whether to show the text alongside the icon.
    * @default true
    */
-  showText?: boolean;
+  readonly showText?: boolean;
   /**
    * Additional CSS classes to apply.
    */
-  className?: string;
+  readonly className?: string;
 }
 
 const sizes = {
-  sm: { icon: 24, text: "text-lg" },
-  md: { icon: 32, text: "text-xl" },
-  lg: { icon: 48, text: "text-3xl" },
+  sm: { icon: 24, text: 'text-lg' },
+  md: { icon: 32, text: 'text-xl' },
+  lg: { icon: 48, text: 'text-3xl' },
 };
 
 /**
@@ -38,11 +38,14 @@ const sizes = {
  * <Logo size="lg" showText={true} />
  * ```
  */
-export function Logo({ size = "md", showText = true, className = "" }: LogoProps) {
+export function Logo({ size = 'md', showText = true, className = '' }: LogoProps) {
   const { icon, text } = sizes[size];
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`
+      flex items-center gap-2
+      ${className}
+    `}>
       {/* Geometric crow icon */}
       <svg
         width={icon}
@@ -70,7 +73,10 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
         </defs>
       </svg>
       {showText && (
-        <span className={`font-display font-bold tracking-tight ${text}`}>
+        <span className={`
+          font-display font-bold tracking-tight
+          ${text}
+        `}>
           <span className="text-gradient-primary">e</span>
           <span className="text-foreground">Crow</span>
         </span>

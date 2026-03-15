@@ -1,4 +1,4 @@
-import { cn } from "@do-ob/core/web";
+import { cn } from '@do-ob/core/web';
 
 /**
  * Props for the SectionHeading component.
@@ -7,24 +7,24 @@ export interface SectionHeadingProps {
   /**
    * Eyebrow text displayed above the title.
    */
-  eyebrow?: string;
+  readonly eyebrow?: string;
   /**
    * Main title text.
    */
-  title: string;
+  readonly title: string;
   /**
    * Subtitle/description text.
    */
-  subtitle?: string;
+  readonly subtitle?: string;
   /**
    * Alignment of the text.
    * @default "center"
    */
-  align?: "left" | "center";
+  readonly align?: 'left' | 'center';
   /**
    * Additional CSS classes.
    */
-  className?: string;
+  readonly className?: string;
 }
 
 /**
@@ -51,27 +51,37 @@ export function SectionHeading({
   eyebrow,
   title,
   subtitle,
-  align = "center",
+  align = 'center',
   className,
 }: SectionHeadingProps) {
   return (
     <div
       className={cn(
-        "max-w-3xl",
-        align === "center" ? "mx-auto text-center" : "text-left",
-        className
+        'max-w-3xl',
+        align === 'center' ? 'mx-auto text-center' : 'text-left',
+        className,
       )}
     >
       {eyebrow && (
-        <span className="mb-4 inline-block font-mono text-sm uppercase tracking-widest text-accent-primary">
+        <span className="
+          text-accent-primary mb-4 inline-block font-mono text-sm
+          tracking-widest uppercase
+        ">
           {eyebrow}
         </span>
       )}
-      <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+      <h2 className="
+        font-display text-foreground text-4xl/tight font-bold tracking-tight
+        md:text-5xl
+        lg:text-6xl
+      ">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-6 text-lg leading-relaxed text-foreground-muted md:text-xl">
+        <p className="
+          text-foreground-muted mt-6 text-lg/relaxed
+          md:text-xl
+        ">
           {subtitle}
         </p>
       )}

@@ -1,20 +1,21 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { expect } from "storybook/test";
-import { Logo } from "./logo";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect } from 'storybook/test';
+
+import { Logo } from './logo';
 
 const meta = {
   component: Logo,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: [ 'autodocs' ],
   argTypes: {
     size: {
-      control: "select",
-      options: ["sm", "md", "lg"],
+      control: 'select',
+      options: [ 'sm', 'md', 'lg' ],
     },
     showText: {
-      control: "boolean",
+      control: 'boolean',
     },
   },
 } satisfies Meta<typeof Logo>;
@@ -27,12 +28,12 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    size: "md",
+    size: 'md',
     showText: true,
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByText("e")).toBeVisible();
-    await expect(canvas.getByText("Crow")).toBeVisible();
+    await expect(canvas.getByText('e')).toBeVisible();
+    await expect(canvas.getByText('Crow')).toBeVisible();
   },
 };
 
@@ -41,12 +42,12 @@ export const Default: Story = {
  */
 export const Small: Story = {
   args: {
-    size: "sm",
+    size: 'sm',
     showText: true,
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByText("e")).toBeVisible();
-    await expect(canvas.getByText("Crow")).toBeVisible();
+    await expect(canvas.getByText('e')).toBeVisible();
+    await expect(canvas.getByText('Crow')).toBeVisible();
   },
 };
 
@@ -55,12 +56,12 @@ export const Small: Story = {
  */
 export const Large: Story = {
   args: {
-    size: "lg",
+    size: 'lg',
     showText: true,
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByText("e")).toBeVisible();
-    await expect(canvas.getByText("Crow")).toBeVisible();
+    await expect(canvas.getByText('e')).toBeVisible();
+    await expect(canvas.getByText('Crow')).toBeVisible();
   },
 };
 
@@ -69,10 +70,10 @@ export const Large: Story = {
  */
 export const IconOnly: Story = {
   args: {
-    size: "md",
+    size: 'md',
     showText: false,
   },
   play: async ({ canvas }) => {
-    await expect(canvas.queryByText("Crow")).not.toBeInTheDocument();
+    await expect(canvas.queryByText('Crow')).not.toBeInTheDocument();
   },
 };

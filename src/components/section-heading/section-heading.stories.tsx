@@ -1,17 +1,18 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { expect } from "storybook/test";
-import { SectionHeading } from "./section-heading";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect } from 'storybook/test';
+
+import { SectionHeading } from './section-heading';
 
 const meta = {
   component: SectionHeading,
   parameters: {
-    layout: "padded",
+    layout: 'padded',
   },
-  tags: ["autodocs"],
+  tags: [ 'autodocs' ],
   argTypes: {
     align: {
-      control: "select",
-      options: ["left", "center"],
+      control: 'select',
+      options: [ 'left', 'center' ],
     },
   },
 } satisfies Meta<typeof SectionHeading>;
@@ -24,14 +25,14 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    eyebrow: "About Us",
-    title: "Our Mission Statement",
-    subtitle: "We are dedicated to building exceptional digital experiences that empower users and push boundaries.",
-    align: "center",
+    eyebrow: 'About Us',
+    title: 'Our Mission Statement',
+    subtitle: 'We are dedicated to building exceptional digital experiences that empower users and push boundaries.',
+    align: 'center',
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByText("About Us")).toBeVisible();
-    await expect(canvas.getByRole("heading", { name: "Our Mission Statement" })).toBeVisible();
+    await expect(canvas.getByText('About Us')).toBeVisible();
+    await expect(canvas.getByRole('heading', { name: 'Our Mission Statement' })).toBeVisible();
     await expect(canvas.getByText(/We are dedicated/)).toBeVisible();
   },
 };
@@ -41,14 +42,14 @@ export const Default: Story = {
  */
 export const LeftAligned: Story = {
   args: {
-    eyebrow: "Features",
-    title: "What We Offer",
-    subtitle: "Discover the powerful capabilities that set us apart from the competition.",
-    align: "left",
+    eyebrow: 'Features',
+    title: 'What We Offer',
+    subtitle: 'Discover the powerful capabilities that set us apart from the competition.',
+    align: 'left',
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByText("Features")).toBeVisible();
-    await expect(canvas.getByRole("heading", { name: "What We Offer" })).toBeVisible();
+    await expect(canvas.getByText('Features')).toBeVisible();
+    await expect(canvas.getByRole('heading', { name: 'What We Offer' })).toBeVisible();
   },
 };
 
@@ -57,12 +58,12 @@ export const LeftAligned: Story = {
  */
 export const WithoutEyebrow: Story = {
   args: {
-    title: "Simple and Direct",
-    subtitle: "Sometimes you just need a straightforward heading without extra decoration.",
-    align: "center",
+    title: 'Simple and Direct',
+    subtitle: 'Sometimes you just need a straightforward heading without extra decoration.',
+    align: 'center',
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByRole("heading", { name: "Simple and Direct" })).toBeVisible();
+    await expect(canvas.getByRole('heading', { name: 'Simple and Direct' })).toBeVisible();
     await expect(canvas.getByText(/Sometimes you just need/)).toBeVisible();
   },
 };
@@ -72,10 +73,10 @@ export const WithoutEyebrow: Story = {
  */
 export const TitleOnly: Story = {
   args: {
-    title: "Just a Title",
-    align: "center",
+    title: 'Just a Title',
+    align: 'center',
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByRole("heading", { name: "Just a Title" })).toBeVisible();
+    await expect(canvas.getByRole('heading', { name: 'Just a Title' })).toBeVisible();
   },
 };

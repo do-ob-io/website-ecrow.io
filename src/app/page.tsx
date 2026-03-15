@@ -1,11 +1,12 @@
-import { Navigation, Footer } from "@/components";
+import { Navigation, Footer } from '@/components';
+
 import {
   HeroSection,
   ServicesSection,
   FeaturesSection,
   AboutSection,
   ContactSection,
-} from "./sections";
+} from './sections';
 
 /**
  * Home page component for the eCrow website.
@@ -14,7 +15,7 @@ import {
  */
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-noise">
+    <div className="bg-noise min-h-screen">
       <Navigation />
       <main>
         <HeroSection />

@@ -1,4 +1,4 @@
 /**
  * FeaturesSection exports.
  */
-export { FeaturesSection } from "./features-section";
+export { FeaturesSection } from './features-section';

@@ -1,4 +1,4 @@
 /**
  * AboutSection exports.
  */
-export { AboutSection } from "./about-section";
+export { AboutSection } from './about-section';
