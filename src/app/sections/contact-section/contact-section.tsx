@@ -13,8 +13,8 @@ export function ContactSection() {
       {/* Background effects */}
       <div className="bg-grid absolute inset-0 opacity-20" />
       <div className="
-        bg-accent-primary/10 absolute top-1/2 left-1/2 h-150 w-150
-        -translate-1/2 rounded-full blur-[150px]
+        bg-accent-primary/10 absolute top-1/2 left-1/2 size-150 -translate-1/2
+        rounded-full blur-[150px]
       " />
 
       <div className="

@@ -19,7 +19,7 @@ const pageLinks = [
  */
 export function Footer() {
   return (
-    <footer className="border-surface-border bg-background relative border-t">
+    <footer className="border-surface-border relative border-t bg-background">
       {/* Background accent */}
       <div className="bg-grid absolute inset-0 opacity-30" />
 
@@ -52,9 +52,9 @@ export function Footer() {
                 key={link.label}
                 href={link.href}
                 className="
-                  text-foreground-muted
+                  text-foreground-muted focus-ring rounded-sm text-sm
+                  font-medium transition-colors
                   hover:text-foreground
-                  focus-ring rounded-sm text-sm font-medium transition-colors
                 "
               >
                 {link.label}

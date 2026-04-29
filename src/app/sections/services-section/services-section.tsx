@@ -7,7 +7,7 @@ import { SectionHeading, ServiceCard } from '@/components';
  */
 export function ServicesSection() {
   return (
-    <section id="services" className="bg-background relative py-32">
+    <section id="services" className="relative bg-background py-32">
       <div className="
         mx-auto max-w-7xl px-6
         lg:px-8

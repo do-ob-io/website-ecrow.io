@@ -29,9 +29,9 @@ function NavLink({ href, children }: NavLinkProps) {
     <a
       href={href}
       className="
-        text-foreground-muted
+        text-foreground-muted focus-ring rounded-sm text-sm font-medium
+        transition-colors
         hover:text-foreground
-        focus-ring rounded-sm text-sm font-medium transition-colors
       "
     >
       {children}
@@ -54,7 +54,7 @@ export function Navigation() {
     <header className="fixed top-0 z-50 w-full">
       {/* Backdrop blur */}
       <div className="
-        border-surface-border bg-background/80 absolute inset-0 border-b
+        border-surface-border absolute inset-0 border-b bg-background/80
         backdrop-blur-xl
       " />
 

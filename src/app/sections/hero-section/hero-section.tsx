@@ -5,7 +5,7 @@
  */
 export function HeroSection() {
   return (
-    <section className="bg-background relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden bg-background">
       {/* Animated background elements */}
       <div className="bg-grid absolute inset-0 opacity-50" />
 
@@ -44,8 +44,8 @@ export function HeroSection() {
 
         {/* Main headline */}
         <h1 className="
-          animate-slide-up font-display text-foreground text-center
-          text-5xl/tight font-bold tracking-tight opacity-0 delay-100
+          animate-slide-up font-display text-center text-5xl/tight font-bold
+          tracking-tight text-foreground opacity-0 delay-100
           md:text-6xl
           lg:text-7xl
           xl:text-8xl
@@ -111,7 +111,7 @@ export function HeroSection() {
 
       {/* Bottom gradient fade */}
       <div className="
-        from-background absolute inset-x-0 bottom-0 h-32 bg-linear-to-t
+        absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background
         to-transparent
       " />
     </section>

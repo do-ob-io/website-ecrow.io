@@ -99,7 +99,7 @@ export function ServiceCard({
           </div>
         )}
 
-        <h3 className="font-display text-foreground mb-3 text-2xl font-bold">
+        <h3 className="font-display mb-3 text-2xl font-bold text-foreground">
           {title}
         </h3>
         <p className="text-foreground-muted leading-relaxed">{description}</p>

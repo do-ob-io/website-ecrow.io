@@ -71,7 +71,7 @@ export function SectionHeading({
         </span>
       )}
       <h2 className="
-        font-display text-foreground text-4xl/tight font-bold tracking-tight
+        font-display text-4xl/tight font-bold tracking-tight text-foreground
         md:text-5xl
         lg:text-6xl
       ">

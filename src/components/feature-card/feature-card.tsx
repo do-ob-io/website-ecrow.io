@@ -92,7 +92,7 @@ export function FeatureCard({
           {icon}
         </div>
 
-        <h3 className="font-display text-foreground mb-3 text-xl font-semibold">
+        <h3 className="font-display mb-3 text-xl font-semibold text-foreground">
           {title}
         </h3>
         <p className="text-foreground-muted leading-relaxed">{description}</p>
